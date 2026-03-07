@@ -113,8 +113,18 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#assignment-1" id="toc-assignment-1" class="nav-link active" data-scroll-target="#assignment-1">Assignment 1</a></li>
+  <li><a href="#assignment-2" id="toc-assignment-2" class="nav-link" data-scroll-target="#assignment-2">Assignment 2</a></li>
+  <li><a href="#assignment-3" id="toc-assignment-3" class="nav-link" data-scroll-target="#assignment-3">Assignment 3</a></li>
+  <li><a href="#assignment-4" id="toc-assignment-4" class="nav-link" data-scroll-target="#assignment-4">Assignment 4</a></li>
+  <li><a href="#assignment-5" id="toc-assignment-5" class="nav-link" data-scroll-target="#assignment-5">Assignment 5</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -138,8 +148,141 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="assignment-1" class="level3">
+<h3 class="anchored" data-anchor-id="assignment-1">Assignment 1</h3>
+<p>Q1: Name and describe three applications you have used that employ a database system to store and access persistent data</p>
+<p>1.) Social Media Platforms</p>
+<p>2.) Ride Sharing Apps (Uber and Lyft)</p>
+<p>3.) Amazon</p>
+<p>Q2: Propose three applications in domain projects, purpose, function, and simple interface design</p>
+<p>1.) Social Media Platforms (LinkedIn &amp; Instagram)</p>
+<ul>
+<li><p>Domain: Social Media​</p></li>
+<li><p>Purpose: Connect with people professionally or socially by sharing content, building a network, or finding job opportunities​</p></li>
+<li><p>Function: User profiles, posts, messaging, and interaction notifications</p></li>
+<li><p>Simple interface design: Homepage, profile page, navigation bar, post button, search bar</p></li>
+</ul>
+<p>2.) Ride Sharing Apps (Uber &amp; Lyft)</p>
+<ul>
+<li><p>Domain: Transportation</p></li>
+<li><p>Purpose: To connect riders with nearby drivers​</p></li>
+<li><p>Function: User accounts, ride requests, GPS tracking, digital payment, rates, and reviews</p></li>
+<li><p>Simple interface design: Request ride feature, driver details, location pick-up/drop-off, map</p></li>
+</ul>
+<p>3.) Amazon</p>
+<ul>
+<li><p>Domain: Digital commerce​</p></li>
+<li><p>Purpose: Online shopping for products ranging from electronics to groceries​</p></li>
+<li><p>Function: Product catalog, Shopping cart, track orders, user account, recommendation pop-ups, payment</p></li>
+<li><p>Simple interface design: Homepage, search bar, product page, checkout page</p></li>
+</ul>
+<p>Q3: If data can be retrieved efficiently and effectively, why is data mining needed?</p>
+<p>Data can be retrieved efficiently and effectively from a database, but it can only do so much with just raw data. Data mining plays a significant role in revealing patterns, trends, and insights with large datasets to discover hidden relationships and make predictions to support informed decision-making. This is something that a simple retrievalcannot provide.</p>
+<p>Q6: Describe at least three tables that might be used to store info in a social network/social media system, such as Twitter or Reddit</p>
+<p>1.) User’s Table</p>
+<ul>
+<li><p>User id (Primary Key) – uniquely identifies each user​</p></li>
+<li><p>Username – display name​</p></li>
+<li><p>Email – contact information​</p></li>
+<li><p>Password – for authentication​</p></li>
+<li><p>Date joined – when the usercreated their account​</p></li>
+<li><p>Profile info – optional bio, profile picture URL</p></li>
+</ul>
+<p>2.) Posts Table</p>
+<ul>
+<li><p>Post id (Primary Key)​</p></li>
+<li><p>User id (Foreign Key) – links to Users table​</p></li>
+<li><p>Content – text, media link, or URL​</p></li>
+<li><p>Timestamp – when the postwas created</p></li>
+<li><p>Engagement&nbsp;metrics</p></li>
+</ul>
+<p>3.) Followers/Connections Table</p>
+<ul>
+<li><p>Follower id (Foreign Key to Users) – user who follows​</p></li>
+<li><p>Followee id (Foreign Key to Users) – user being followed​</p></li>
+<li><p>Follow date – time stamp ofwhen the connection was created</p></li>
+</ul>
+</section>
+<section id="assignment-2" class="level3">
+<h3 class="anchored" data-anchor-id="assignment-2">Assignment 2</h3>
+<p>Q1: What are the differences between relation schema, relation, and instance?Give an example using theuniversity database to illustrate</p>
+<ul>
+<li><p>A relation schema is a visual of the table name and columns that it contains. It is essentially the structure of the table. Ex: Instructor (ID, Name, Dept_name, Salary). This is a relation schema because it doesn’t include any actual data, but defines what info will be stored​</p></li>
+<li><p>A relation is the actual table that follows the schema. Ex:&nbsp;instructor table with rows like (10101, Srinivasan, Comp. Sci., 65000)​</p></li>
+<li><p>An Instance is the part of the data in the table that is changed in a moment of time. Ex: If a salary changes or a new instructor is added, the data changes, creating a new instance, but the schema stays the same.</p></li>
+</ul>
+<p>Q2: Draw a schema diagram for the following bank database:​<br>
+branch (branch_name, branch_city, assets)​ | customer (ID, customer_name, customer_street, customer_city)​ | loan (loan_number, branch_name, amount)​| borrower (ID, loan_number)​ | account (account_number, branch_name, balance)​ | depositor (ID, account_number)</p>
+<p><img src="images/clipboard-2831612523.png" class="img-fluid" width="261"></p>
+<p>Q3: Consider the above bank database. Assume that branch names(branch_name) and customer names (customer_name) uniquely&nbsp;identifies&nbsp;branches andcustomers, but loans and accounts can be associated with more than one customer</p>
+<p>i. What are the appropriate primary keys (underline each in the diagram)​</p>
+<p>ii. Given your choice of primary keys, identify appropriate foreign keys defined</p>
+<p>i. Branch (branch_name), Customer (customer_name), Loan (loan_number), Account (account_number), Borrower (customer_name, loan_number), Depositor (customer_name, account_name)</p>
+<p>ii. LOAN.branch_name –&gt; BRNACH.branch_name, ACCOUNT.branch_name –&gt; BRANCH.branch_name, BORROWER.customer_name –&gt; CUSTOMER.customer_name, BORROWER.loan_number –&gt; LOAN.loan_number, DEPOSITOR.customer_name –&gt; CUSTOMER.customer_name, DEPOSITOR.account_number –&gt; ACCOUNT.account_number</p>
+<p>Q4: Describe two ways artificial intelligence or LLM can assist in managing or querying a database. In your answer, briefly explain how each method improves efficiency or accuracy compared to traditional (non-AI) approaches</p>
+<p>Natural Language Querying: Learning Language Models or Artificial Intelligence can turn thelanguage we speak everyday into SQL queries. Instead of manually writing SQL it reduces errors and saves time. An example of this is typing “Show all loans over $10,000 from Comp Sci branch” then AI will generate a query for this.​</p>
+<p>Data Cleaning and Anomaly Detection: AI can automatically detect duplicates, unusual patterns, and mistakes in data. It can find problems that simple rules or humans might miss, which improves the occurrence while also making database analysis more reliable</p>
+</section>
+<section id="assignment-3" class="level3">
+<h3 class="anchored" data-anchor-id="assignment-3">Assignment 3</h3>
+<p>Q: Write SQL</p>
+<p>i. Student ID (hint: from the takes relation)</p>
+<p>SELECT DISTINCT ID​</p>
+<p>FROM takes;</p>
+<p>ii. Instructors</p>
+<p>SELECT name​</p>
+<p>FROM instructor;</p>
+<p>iii. Departments</p>
+<p>SELECT DISTINCT dept_name​</p>
+<p>FROM instructor;</p>
+<p>Question 3: Write in SQL codes to do the following series</p>
+<p><em>ID and</em> <em>name of student who has taken at least one Comp.Sci course</em></p>
+<p>i. Select distinct student.ID, name from student inner join takeson student.ID = takes.ID inner join course on&nbsp;takes.course_id=&nbsp;course.course_id&nbsp;where&nbsp;course.dept_name&nbsp;= ‘Comp. Sci.’. Sci.’</p>
+<p><em>Add grades to list</em></p>
+<p>ii. Select distinct student.ID, student.name, takes.grade from student inner join takes on student.ID =​ takes.ID inner join course on takes.course_id = course.course_id where&nbsp;course.dept_name = ’Comp.Sci.</p>
+<p><em>Find ID and name of each student who has not taken any course offered before 2017</em></p>
+<p>iii. Select student.ID, student.name from student where student.ID in (select distinct takes.ID from takes join section on takes.course_id = section.course_id and takes.sec_id = section.sec_id and takes.semester = section.semester and takes.year = section.year where section.year &gt; 2017)</p>
+<p><em>For each department, find max salary of instructors</em></p>
+<p>iv. Selct dept_name, max(salary) as max_salary from instructor group by dept_name</p>
+<p><em>Find Min. Salary</em></p>
+<p>v. Select dept_name, min (salary) as min_salary from instructor group by dept_name</p>
+<p><em>Add names to list</em></p>
+<p>vi. Select instructor.dept_name, instructor.name asinstructor_name, instructor.salary as max_salary FROM instructor join (Selectdept_name,&nbsp;MAX(salary) as max_salary from​ instructor group by dept_name) max_salaries ON instructor.dept_name =​ max_salaries.dept_name and instructor.salary =max_salaries.max_salary</p>
+<p>Q4:find instructors with nameand ID who have nevergiven an A&nbsp;grade in anycourse she/he​ has taught (instructorswho have never taught trivially satisfy)</p>
+<p>Select distinct instructor.name, instructor.IDfrom instructor left join teacheson&nbsp;instructor.ID = teaches.ID left join takes on teaches.course_id&nbsp;=&nbsp;takes.course_idand&nbsp;teaches.sec_id&nbsp;=&nbsp;takes.sec_id&nbsp;and teaches.semester&nbsp;=&nbsp;takes.semester&nbsp;andteaches.year&nbsp;=&nbsp;takes.year&nbsp;wheretakes.grade&nbsp;&lt;&gt; ‘A’ OR&nbsp;takes.grade&nbsp;is NULL</p>
+</section>
+<section id="assignment-4" class="level3">
+<h3 class="anchored" data-anchor-id="assignment-4">Assignment 4</h3>
+<p>Q1: Difference between a weak and strong entity set</p>
+<p>Weak entity set is where an entity is dependenton&nbsp;another entity set (identifying entity set).Instead of using the primary key of the weakentity set, we use primary key of the identifyingentity set. Extra attributes called discriminatorattributes to uniquely identify weak entity set.​ A strong entity set can stand alone. Has uniqueprimary key that identifies each entity in the set​</p>
+<p>&nbsp; &nbsp;Ex: Advisor, prerequisite –&gt; lacks independence​</p>
+<p>Q2: Design E-R Diagram</p>
+<p><img src="images/clipboard-4265377445.png" class="img-fluid" width="444"></p>
+<p>Q3A: Explain why appending natural join section in​ the from clause would not change the result.</p>
+<p>​It doesn’t introduce additionally filtering or​ groupings.</p>
+<p><img src="images/clipboard-1483049370.png" class="img-fluid" width="404"></p>
+<p>Q3B: Write an SQL query using the&nbsp;university schema to find theID of each student who has&nbsp;never taken a course at the​ university. Do this using no subqueries and no set&nbsp;operations​ (use an outer join). (Consult&nbsp;Ch. 4, 4.1.3)</p>
+<p><img src="images/clipboard-960169737.png" class="img-fluid" width="412"></p>
+</section>
+<section id="assignment-5" class="level3">
+<h3 class="anchored" data-anchor-id="assignment-5">Assignment 5</h3>
+<p>Q2: Construct E-R diagram for a hospital with a set of patients and a set of medical doctors. Associate with each patient a log of the various tests and examinations conducted</p>
+<p><img src="images/clipboard-3089495939.png" class="img-fluid" width="429"></p>
+<p>Q3: We can convert any weak entity set by simply adding appropriate attributes. Why then do we have weak entity sets?</p>
+<p>It’s&nbsp;technically possible to convert a weak entity into a strong one by adding unique attributes; but we preserve data integrity to maintain weak entity sets. We create a more efficient modular database structure and reduce data redundancy by keeping these entities dependent on a parent. It is easier to manageand align with real world relationships.&nbsp;</p>
+<p>Q4: SQL exercise</p>
+<p><em>Part A</em></p>
+<p>i.Find ID and name of each employee who lives in thesame city as the location of the company for which theemployee works.&nbsp;</p>
+<p>Select&nbsp;employee.ID,&nbsp;employee.person_name&nbsp;fromemployee e join works&nbsp;w on&nbsp;e.ID=w.ID join companyc on w.company_name&nbsp;= c.company_name wherec.city = ecity</p>
+<p>ii. Find ID and name of each employee who lives in the same city and on the same street as does her or his manager.</p>
+<p>Select employee.ID,&nbsp;employee.person_name&nbsp;fromemployee e join manages m on e.ID = m.ID where.city&nbsp;=&nbsp;m.city&nbsp;AND&nbsp;e.street&nbsp;=&nbsp;m.street&nbsp;</p>
+<p>iii. Find ID and name of each employee who earns more than the avergage salary of all employees of her or his company</p>
+<p>Select employee.ID, employee.person_name from employee e join work w on e.ID = w.ID join ( select&nbsp;company_name, AVG(salary), as&nbsp;avg_salary&nbsp;from w group by company_name)as avg_salary on w.company_name =avg_salary.comapny_name where w.salary &gt; avg_salary</p>
+<p><em>Part B</em></p>
+<p>Q4: Consider the following SQL query that seeks to find a list of titles of all courses taught in Spring 2017 along with the name of the instructor. What is wrong with this query?</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
