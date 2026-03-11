@@ -193,7 +193,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Post id (Primary Key)​</p></li>
 <li><p>User id (Foreign Key) – links to Users table​</p></li>
 <li><p>Content – text, media link, or URL​</p></li>
-<li><p>Timestamp – when the postwas created</p></li>
+<li><p>Timestamp – when the post was created</p></li>
 <li><p>Engagement&nbsp;metrics</p></li>
 </ul>
 <p>3.) Followers/Connections Table</p>
@@ -214,13 +214,13 @@ ul.task-list li input[type="checkbox"] {
 <p>Q2: Draw a schema diagram for the following bank database:​<br>
 branch (branch_name, branch_city, assets)​ | customer (ID, customer_name, customer_street, customer_city)​ | loan (loan_number, branch_name, amount)​| borrower (ID, loan_number)​ | account (account_number, branch_name, balance)​ | depositor (ID, account_number)</p>
 <p><img src="images/clipboard-2831612523.png" class="img-fluid" width="261"></p>
-<p>Q3: Consider the above bank database. Assume that branch names(branch_name) and customer names (customer_name) uniquely&nbsp;identifies&nbsp;branches andcustomers, but loans and accounts can be associated with more than one customer</p>
+<p>Q3: Consider the above bank database. Assume that branch names(branch_name) and customer names (customer_name) uniquely identifies branches and customers, but loans and accounts can be associated with more than one customer</p>
 <p>i. What are the appropriate primary keys (underline each in the diagram)​</p>
 <p>ii. Given your choice of primary keys, identify appropriate foreign keys defined</p>
 <p>i. Branch (branch_name), Customer (customer_name), Loan (loan_number), Account (account_number), Borrower (customer_name, loan_number), Depositor (customer_name, account_name)</p>
 <p>ii. LOAN.branch_name –&gt; BRNACH.branch_name, ACCOUNT.branch_name –&gt; BRANCH.branch_name, BORROWER.customer_name –&gt; CUSTOMER.customer_name, BORROWER.loan_number –&gt; LOAN.loan_number, DEPOSITOR.customer_name –&gt; CUSTOMER.customer_name, DEPOSITOR.account_number –&gt; ACCOUNT.account_number</p>
 <p>Q4: Describe two ways artificial intelligence or LLM can assist in managing or querying a database. In your answer, briefly explain how each method improves efficiency or accuracy compared to traditional (non-AI) approaches</p>
-<p>Natural Language Querying: Learning Language Models or Artificial Intelligence can turn thelanguage we speak everyday into SQL queries. Instead of manually writing SQL it reduces errors and saves time. An example of this is typing “Show all loans over $10,000 from Comp Sci branch” then AI will generate a query for this.​</p>
+<p>Natural Language Querying: Learning Language Models or Artificial Intelligence can turn the language we speak everyday into SQL queries. Instead of manually writing SQL it reduces errors and saves time. An example of this is typing “Show all loans over $10,000 from Comp Sci branch” then AI will generate a query for this.​</p>
 <p>Data Cleaning and Anomaly Detection: AI can automatically detect duplicates, unusual patterns, and mistakes in data. It can find problems that simple rules or humans might miss, which improves the occurrence while also making database analysis more reliable</p>
 </section>
 <section id="assignment-3" class="level3">
@@ -243,7 +243,7 @@ branch (branch_name, branch_city, assets)​ | customer (ID, customer_name, cust
 <p><em>Find ID and name of each student who has not taken any course offered before 2017</em></p>
 <p>iii. Select student.ID, student.name from student where student.ID in (select distinct takes.ID from takes join section on takes.course_id = section.course_id and takes.sec_id = section.sec_id and takes.semester = section.semester and takes.year = section.year where section.year &gt; 2017)</p>
 <p><em>For each department, find max salary of instructors</em></p>
-<p>iv. Selct dept_name, max(salary) as max_salary from instructor group by dept_name</p>
+<p>iv. Select dept_name, max(salary) as max_salary from instructor group by dept_name</p>
 <p><em>Find Min. Salary</em></p>
 <p>v. Select dept_name, min (salary) as min_salary from instructor group by dept_name</p>
 <p><em>Add names to list</em></p>
@@ -254,14 +254,14 @@ branch (branch_name, branch_city, assets)​ | customer (ID, customer_name, cust
 <section id="assignment-4" class="level3">
 <h3 class="anchored" data-anchor-id="assignment-4">Assignment 4</h3>
 <p>Q1: Difference between a weak and strong entity set</p>
-<p>Weak entity set is where an entity is dependenton&nbsp;another entity set (identifying entity set).Instead of using the primary key of the weakentity set, we use primary key of the identifyingentity set. Extra attributes called discriminatorattributes to uniquely identify weak entity set.​ A strong entity set can stand alone. Has uniqueprimary key that identifies each entity in the set​</p>
+<p>A weak entity set is where an entity is dependent on another entity set (identifying entity set). Instead of using the primary key of the weakentity set, we use the primary key of the identifying entity set. Extra attributes called discriminator attributes to uniquely identify weak entity set.​ A strong entity set can stand alone. Has unique primary key that identifies each entity in the set​</p>
 <p>&nbsp; &nbsp;Ex: Advisor, prerequisite –&gt; lacks independence​</p>
 <p>Q2: Design E-R Diagram</p>
 <p><img src="images/clipboard-4265377445.png" class="img-fluid" width="444"></p>
 <p>Q3A: Explain why appending natural join section in​ the from clause would not change the result.</p>
 <p>​It doesn’t introduce additionally filtering or​ groupings.</p>
 <p><img src="images/clipboard-1483049370.png" class="img-fluid" width="404"></p>
-<p>Q3B: Write an SQL query using the&nbsp;university schema to find theID of each student who has&nbsp;never taken a course at the​ university. Do this using no subqueries and no set&nbsp;operations​ (use an outer join). (Consult&nbsp;Ch. 4, 4.1.3)</p>
+<p>Q3B: Write an SQL query using the&nbsp;university schema to find the ID of each student who has never taken a course at the​ university. Do this using no subqueries and no set operations​ (use an outer join). (Consult&nbsp;Ch. 4, 4.1.3)</p>
 <p><img src="images/clipboard-960169737.png" class="img-fluid" width="412"></p>
 </section>
 <section id="assignment-5" class="level3">
@@ -269,17 +269,18 @@ branch (branch_name, branch_city, assets)​ | customer (ID, customer_name, cust
 <p>Q2: Construct E-R diagram for a hospital with a set of patients and a set of medical doctors. Associate with each patient a log of the various tests and examinations conducted</p>
 <p><img src="images/clipboard-3089495939.png" class="img-fluid" width="429"></p>
 <p>Q3: We can convert any weak entity set by simply adding appropriate attributes. Why then do we have weak entity sets?</p>
-<p>It’s&nbsp;technically possible to convert a weak entity into a strong one by adding unique attributes; but we preserve data integrity to maintain weak entity sets. We create a more efficient modular database structure and reduce data redundancy by keeping these entities dependent on a parent. It is easier to manageand align with real world relationships.&nbsp;</p>
+<p>It’s technically possible to convert a weak entity into a strong one by adding unique attributes, but we preserve data integrity to maintain weak entity sets. We create a more efficient modular database structure and reduce data redundancy by keeping these entities dependent on a parent. It is easier to manage and align with real world relationships.&nbsp;</p>
 <p>Q4: SQL exercise</p>
 <p><em>Part A</em></p>
-<p>i.Find ID and name of each employee who lives in thesame city as the location of the company for which theemployee works.&nbsp;</p>
-<p>Select&nbsp;employee.ID,&nbsp;employee.person_name&nbsp;fromemployee e join works&nbsp;w on&nbsp;e.ID=w.ID join companyc on w.company_name&nbsp;= c.company_name wherec.city = ecity</p>
+<p>i.Find ID and name of each employee who lives in the same city as the location of the company for which theemployee works.&nbsp;</p>
+<p>Select&nbsp;employee.ID,&nbsp;employee.person_name&nbsp;fromemployee e join works&nbsp;w on&nbsp;e.ID=w.ID join company c on w.company_name&nbsp;= c.company_name wherec.city = ecity</p>
 <p>ii. Find ID and name of each employee who lives in the same city and on the same street as does her or his manager.</p>
 <p>Select employee.ID,&nbsp;employee.person_name&nbsp;fromemployee e join manages m on e.ID = m.ID where.city&nbsp;=&nbsp;m.city&nbsp;AND&nbsp;e.street&nbsp;=&nbsp;m.street&nbsp;</p>
-<p>iii. Find ID and name of each employee who earns more than the avergage salary of all employees of her or his company</p>
-<p>Select employee.ID, employee.person_name from employee e join work w on e.ID = w.ID join ( select&nbsp;company_name, AVG(salary), as&nbsp;avg_salary&nbsp;from w group by company_name)as avg_salary on w.company_name =avg_salary.comapny_name where w.salary &gt; avg_salary</p>
+<p>iii. Find ID and name of each employee who earns more than the average salary of all employees of his or her company</p>
+<p>Select employee.ID, employee.person_name from employee e join work w on e.ID = w.ID join ( select&nbsp;company_name, AVG(salary), as&nbsp;avg_salary&nbsp;from w group by company_name)as avg_salary on w.company_name =avg_salary.company_name where w.salary &gt; avg_salary</p>
 <p><em>Part B</em></p>
-<p>Q4: Consider the following SQL query that seeks to find a list of titles of all courses taught in Spring 2017 along with the name of the instructor. What is wrong with this query?</p>
+<p>Q4: Consider the following SQL query that seeks to find a list of titles of all courses taught in Spring 2017, along with the name of the instructor. What is wrong with this query?</p>
+<p>Query use of NATURAL JOIN over several tables is the problem. This automatically joins tables using all columns, even those that are not meant to be joining tables. Both the section and instructor tables have a column called dept_name. NATURAL JOIN will try to match the columns when it’s only supposed to connect instructors to their courses. A better way to write this is by using JOIN condition to ensure the database is connecting tables with columns we actually want.</p>
 
 
 </section>
