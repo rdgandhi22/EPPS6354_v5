@@ -123,6 +123,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#assignment-3" id="toc-assignment-3" class="nav-link" data-scroll-target="#assignment-3">Assignment 3</a></li>
   <li><a href="#assignment-4" id="toc-assignment-4" class="nav-link" data-scroll-target="#assignment-4">Assignment 4</a></li>
   <li><a href="#assignment-5" id="toc-assignment-5" class="nav-link" data-scroll-target="#assignment-5">Assignment 5</a></li>
+  <li><a href="#assignment-6" id="toc-assignment-6" class="nav-link" data-scroll-target="#assignment-6">Assignment 6</a></li>
+  <li><a href="#progress-report" id="toc-progress-report" class="nav-link" data-scroll-target="#progress-report">Progress Report</a></li>
   </ul>
 </nav>
     </div>
@@ -281,6 +283,23 @@ branch (branch_name, branch_city, assets)​ | customer (ID, customer_name, cust
 <p><em>Part B</em></p>
 <p>Q4: Consider the following SQL query that seeks to find a list of titles of all courses taught in Spring 2017, along with the name of the instructor. What is wrong with this query?</p>
 <p>Query use of NATURAL JOIN over several tables is the problem. This automatically joins tables using all columns, even those that are not meant to be joining tables. Both the section and instructor tables have a column called dept_name. NATURAL JOIN will try to match the columns when it’s only supposed to connect instructors to their courses. A better way to write this is by using JOIN condition to ensure the database is connecting tables with columns we actually want.</p>
+</section>
+<section id="assignment-6" class="level3">
+<h3 class="anchored" data-anchor-id="assignment-6">Assignment 6</h3>
+<p>Q1: Look up websites containing the following data representations. Analyze the websites in terms of structure and composition. Name the technology/methods use for creating the web database:</p>
+<p>a) Using JSON</p>
+<p>JSON represents structured data based on JavaScript object syntax and has a standard text-based format. It is easy for machines to generate and parse as well as for humans to read and write because of its lightweight data interchange format. It resembles JavaScript object syntax and is commonly used for sending data from a server to a client so it can be displayed on a web page, and is commonly used for transmitting data in web applications. JSON serves as a string with a specified data format&nbsp; consisting of ordered lists and key-value pairs</p>
+<p>b) Using XML</p>
+<p>XML is a markup language designed to transport and store data while being both machine and human readable. XML’s focus is usually on giving users the ability to define their own custom tags, while on the other hand, HTML focuses on how the data looks. XML plays a big role in the enterprise environment and different IT systems for distributing data over the internet. It’s a meta-language that is used to define or create other languages.</p>
+<p>Q2: SQL exercise</p>
+<p>i. Express the following query in SQL using no subqueries and no set operations</p>
+<p>Select ID from student s left outer join advisor i on s_id=i_id where i_id is not null</p>
+<p>ii. Using the university schema, write an SQL query to find the names and IDs of those instructors who teach every course taught in his or her department.</p>
+<p>Select name, ID from instructor i join course c on i.dept_name = c.dept_name group by i.ID, i.name HAVING COUNT (DISTINCT c.course_id) = (SELECT COUNT (*) FROM course WHERE dept_name) ORDER BY i.name;</p>
+<p>Lab - R and PostgreSQL</p>
+</section>
+<section id="progress-report" class="level3">
+<h3 class="anchored" data-anchor-id="progress-report">Progress Report</h3>
 
 
 </section>
