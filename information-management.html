@@ -124,6 +124,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#assignment-4" id="toc-assignment-4" class="nav-link" data-scroll-target="#assignment-4">Assignment 4</a></li>
   <li><a href="#assignment-5" id="toc-assignment-5" class="nav-link" data-scroll-target="#assignment-5">Assignment 5</a></li>
   <li><a href="#assignment-6" id="toc-assignment-6" class="nav-link" data-scroll-target="#assignment-6">Assignment 6</a></li>
+  <li><a href="#lab-r-and-postgresql" id="toc-lab-r-and-postgresql" class="nav-link" data-scroll-target="#lab-r-and-postgresql">Lab R and PostgreSQL</a></li>
   <li><a href="#progress-report" id="toc-progress-report" class="nav-link" data-scroll-target="#progress-report">Progress Report</a></li>
   </ul>
 </nav>
@@ -296,7 +297,19 @@ branch (branch_name, branch_city, assets)​ | customer (ID, customer_name, cust
 <p>Select ID from student s left outer join advisor i on s_id=i_id where i_id is not null</p>
 <p>ii. Using the university schema, write an SQL query to find the names and IDs of those instructors who teach every course taught in his or her department.</p>
 <p>Select name, ID from instructor i join course c on i.dept_name = c.dept_name group by i.ID, i.name HAVING COUNT (DISTINCT c.course_id) = (SELECT COUNT (*) FROM course WHERE dept_name) ORDER BY i.name;</p>
-<p>Lab - R and PostgreSQL</p>
+</section>
+<section id="lab-r-and-postgresql" class="level3">
+<h3 class="anchored" data-anchor-id="lab-r-and-postgresql">Lab R and PostgreSQL</h3>
+<p><img src="images/clipboard-2195884949.png" class="img-fluid"></p>
+<p><img src="images/clipboard-2379128383.png" class="img-fluid"></p>
+<p><img src="images/clipboard-2540658297.png" class="img-fluid"></p>
+<p><img src="images/clipboard-2445103496.png" class="img-fluid"></p>
+<p><img src="images/clipboard-549124077.png" class="img-fluid" width="326"></p>
+<p><img src="images/clipboard-3595160392.png" class="img-fluid"></p>
+<p><img src="images/clipboard-1392905845.png" class="img-fluid" width="325"></p>
+<p><img src="images/clipboard-229872538.png" class="img-fluid"></p>
+<p><img src="images/clipboard-1447442518.png" class="img-fluid" width="292"></p>
+<p><img src="images/clipboard-1994549395.png" class="img-fluid"></p>
 </section>
 <section id="progress-report" class="level3">
 <h3 class="anchored" data-anchor-id="progress-report">Progress Report</h3>
