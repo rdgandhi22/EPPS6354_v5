@@ -124,8 +124,9 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#assignment-4" id="toc-assignment-4" class="nav-link" data-scroll-target="#assignment-4">Assignment 4</a></li>
   <li><a href="#assignment-5" id="toc-assignment-5" class="nav-link" data-scroll-target="#assignment-5">Assignment 5</a></li>
   <li><a href="#assignment-6" id="toc-assignment-6" class="nav-link" data-scroll-target="#assignment-6">Assignment 6</a></li>
-  <li><a href="#lab-r-and-postgresql" id="toc-lab-r-and-postgresql" class="nav-link" data-scroll-target="#lab-r-and-postgresql">Lab R and PostgreSQL</a></li>
-  <li><a href="#progress-report" id="toc-progress-report" class="nav-link" data-scroll-target="#progress-report">Progress Report</a></li>
+  <li><a href="#lab-r-and-postgresql-1" id="toc-lab-r-and-postgresql-1" class="nav-link" data-scroll-target="#lab-r-and-postgresql-1">Lab R and PostgreSQL (1)</a></li>
+  <li><a href="#database-project-progress-report" id="toc-database-project-progress-report" class="nav-link" data-scroll-target="#database-project-progress-report">Database Project Progress Report</a></li>
+  <li><a href="#assignment-7" id="toc-assignment-7" class="nav-link" data-scroll-target="#assignment-7">Assignment 7</a></li>
   </ul>
 </nav>
     </div>
@@ -298,8 +299,8 @@ branch (branch_name, branch_city, assets)​ | customer (ID, customer_name, cust
 <p>ii. Using the university schema, write an SQL query to find the names and IDs of those instructors who teach every course taught in his or her department.</p>
 <p>Select name, ID from instructor i join course c on i.dept_name = c.dept_name group by i.ID, i.name HAVING COUNT (DISTINCT c.course_id) = (SELECT COUNT (*) FROM course WHERE dept_name) ORDER BY i.name;</p>
 </section>
-<section id="lab-r-and-postgresql" class="level3">
-<h3 class="anchored" data-anchor-id="lab-r-and-postgresql">Lab R and PostgreSQL</h3>
+<section id="lab-r-and-postgresql-1" class="level3">
+<h3 class="anchored" data-anchor-id="lab-r-and-postgresql-1">Lab R and PostgreSQL (1)</h3>
 <p><img src="images/clipboard-2195884949.png" class="img-fluid"></p>
 <p><img src="images/clipboard-2379128383.png" class="img-fluid"></p>
 <p><img src="images/clipboard-2540658297.png" class="img-fluid"></p>
@@ -311,9 +312,12 @@ branch (branch_name, branch_city, assets)​ | customer (ID, customer_name, cust
 <p><img src="images/clipboard-1447442518.png" class="img-fluid" width="292"></p>
 <p><img src="images/clipboard-1994549395.png" class="img-fluid"></p>
 </section>
-<section id="progress-report" class="level3">
-<h3 class="anchored" data-anchor-id="progress-report">Progress Report</h3>
+<section id="database-project-progress-report" class="level3">
+<h3 class="anchored" data-anchor-id="database-project-progress-report">Database Project Progress Report</h3>
 <p>The objective of this Database project is to identify genre burnout in the literacy platform I am trying to build. To narrow the scope of what this platform will do, I am pivoting from a broad social reading platform to honing in on a hybrid approach using both NoSQL and a Vector Database system. The goal is for this engine to analyze and detect declining engagement and reader sentiment. I have shifted the focus of the project from creating a system that can provide a vibe matcher book to instead provide a palate cleanser one. By using R packages, it will detect sentiment analysis and mathematical “vibe matching” in order to recommend palate cleanser books. Ideally, this will serve as a predictive trend analyzer and digital memory for reading communities. Current progress has been made in terms of data collection from existing sources of Kaggle book datasets from Amazon, Goodreads, and Reddit forums. I have refined/organized the data to focus on the main 4 attributes: book title, description review, category/genre, and rating. A couple of goals I have going forward with the project is to use R to calculate sentiment scores from the reviews to detect when a readers interest in a specific genre begins to decline, build the vector based search tool to not only read the genre label but to also map them by their “thematic vibes”, and finally a recommendation system that can recommend a palate cleanser book from the mathematical coordinates embedded into it.</p>
+</section>
+<section id="assignment-7" class="level3">
+<h3 class="anchored" data-anchor-id="assignment-7">Assignment 7</h3>
 
 
 </section>
